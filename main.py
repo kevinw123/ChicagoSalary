@@ -25,7 +25,6 @@ def occupationCount():
     plt.show()
 
 def topSalary():
-    maxSalary = 0.0
     index = 0
     salaryList = {}
     with open("chicago_salaries.csv") as csvfile:
@@ -45,7 +44,6 @@ def topSalary():
     print(max(salaryList.values()))
 
 def minSalary():
-    maxSalary = 0.0
     index = 0
     salaryList = {}
     with open("chicago_salaries.csv") as csvfile:
