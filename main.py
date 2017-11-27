@@ -62,10 +62,24 @@ def minSalary():
 
     print(min(salaryList.values()))
 
+def numFemaleOfficers():
+    count = 0
+
+    with open("chicago_salaries.csv") as csvfile:
+        employeeRow = csv.reader(csvfile, delimiter=",")
+        for row in employeeRow:
+            if row[1] == "POLICE OFFICER" and row[3] == "F":
+                count += 1
+
+
+    print(count)
+
+
 def main():
     # occupationCount()
     # topSalary()
-    minSalary()
+    # minSalary()
+    numFemaleOfficers()
 
 if __name__ == "__main__":
     main()
